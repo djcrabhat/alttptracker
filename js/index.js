@@ -47,7 +47,7 @@ export function load_cookie() {
 	}
 }
 
-function toggle(x, y) {
+export function toggle(x, y) {
 	document.getElementById("starting" + x).classList.remove(x + startingitemstring.charAt(y));
 	switch (y) {
 		case 1:
@@ -65,14 +65,14 @@ function toggle(x, y) {
 	document.getElementById("starting" + x).style.opacity = (startingitemstring.charAt(y) === "0" ? "0.25" : "1.0");
 }
 
-function setstartingitem(x, y, z) {
+export function setstartingitem(x, y, z) {
 	document.getElementById("starting" + x).classList.remove(x + startingitemstring.charAt(y));
 	startingitemstring = startingitemstring.substring(0, y) + z + startingitemstring.substring(y + 1);
 	document.getElementById("starting" + x).classList.add(x + startingitemstring.charAt(y));
 	document.getElementById("starting" + x).style.opacity = (startingitemstring.charAt(y) === "0" ? "0.25" : "1.0");	
 }
 
-function resetallstartingitems() {
+export function resetallstartingitems() {
 	setstartingitem("moonpearl",0,"0");
 	setstartingitem("bow",1,"0");
 	setstartingitem("boomerang",2,"0");
@@ -209,7 +209,7 @@ export function launch_tracker() {
 			.replace('{width}', width).replace('{height}', height));
 }
 
-function loadarchivepreset() {
+export function loadarchivepreset() {
 	var archiveselect = document.getElementById("archivepresetselect");
 
 	switch (archiveselect.options[archiveselect.selectedIndex].value) {
@@ -315,7 +315,7 @@ function loadarchivepreset() {
 	
 }
 
-function loadopenpreset() {
+export function loadopenpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -343,7 +343,7 @@ function loadopenpreset() {
 	showToast();
 }
 
-function loadopenbootspreset() {
+export function loadopenbootspreset() {
 	resetallstartingitems();
 	setstartingitem("boots",22,"1");
 	document.getElementById("gametypeopen").checked = true;
@@ -372,7 +372,7 @@ function loadopenbootspreset() {
 	showToast();
 }
 
-function loadambrosiapreset() {
+export function loadambrosiapreset() {
 	resetallstartingitems();
 	document.getElementById("gametypestandard").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -400,7 +400,7 @@ function loadambrosiapreset() {
 	showToast();
 }
 
-function loadmysterypreset() {
+export function loadmysterypreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -428,7 +428,7 @@ function loadmysterypreset() {
 	showToast();
 }
 
-function loadcrosskeyspreset() {
+export function loadcrosskeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancesimple").checked = true;
@@ -456,7 +456,7 @@ function loadcrosskeyspreset() {
 	showToast();
 }
 
-function loadinvertedkeyspreset() {
+export function loadinvertedkeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeinverted").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -484,7 +484,7 @@ function loadinvertedkeyspreset() {
 	showToast();
 }
 
-function loadenemizerpreset() {
+export function loadenemizerpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -512,7 +512,7 @@ function loadenemizerpreset() {
 	showToast();
 }
 
-function loadbootspreset() {
+export function loadbootspreset() {
 	resetallstartingitems();
 	setstartingitem("boots",22,"1");
 	document.getElementById("gametypestandard").checked = true;
@@ -541,7 +541,7 @@ function loadbootspreset() {
 	showToast();
 }
 
-function loadopenkeyspreset() {
+export function loadopenkeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -569,7 +569,7 @@ function loadopenkeyspreset() {
 	showToast();	
 }
 
-function loadadkeyspreset() {
+export function loadadkeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -597,7 +597,7 @@ function loadadkeyspreset() {
 	showToast();	
 }
 
-function loadreducedpreset() {
+export function loadreducedpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -625,7 +625,7 @@ function loadreducedpreset() {
 	showToast();
 }
 
-function loadinvrosiapreset() {
+export function loadinvrosiapreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeinverted").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -654,7 +654,7 @@ function loadinvrosiapreset() {
 	
 }
 
-function loadstandardpreset() {
+export function loadstandardpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypestandard").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -682,7 +682,7 @@ function loadstandardpreset() {
 	showToast();
 }
 
-function loadmcshufflepreset() {
+export function loadmcshufflepreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -710,7 +710,7 @@ function loadmcshufflepreset() {
 	showToast();
 }
 
-function loadpotpourripreset() {
+export function loadpotpourripreset() {
 	resetallstartingitems();
 	setstartingitem("hookshot",3,"1");
 	setstartingitem("icerod",7,"1");
@@ -741,7 +741,7 @@ function loadpotpourripreset() {
 	showToast();
 }
 
-function loadretrancepreset() {
+export function loadretrancepreset() {
 	resetallstartingitems();
 	document.getElementById("gametyperetro").checked = true;
 	document.getElementById("entrancesimple").checked = true;
@@ -769,7 +769,7 @@ function loadretrancepreset() {
 	showToast();
 }
 
-function loadcswordlesspreset() {
+export function loadcswordlesspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -797,7 +797,7 @@ function loadcswordlesspreset() {
 	showToast();
 }
 
-function loadinvertedadkeyspreset() {
+export function loadinvertedadkeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeinverted").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -824,7 +824,7 @@ function loadinvertedadkeyspreset() {
 	showToast();
 }
 
-function loadgoldrushspreset() {
+export function loadgoldrushspreset() {
 	resetallstartingitems();
 	setstartingitem("boots",22,"1");
 	document.getElementById("gametypeopen").checked = true;
@@ -853,7 +853,7 @@ function loadgoldrushspreset() {
 	showToast();
 }
 
-function loadludicrouspreset() {
+export function loadludicrouspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -881,7 +881,7 @@ function loadludicrouspreset() {
 	showToast();
 }
 
-function loadhardopenpluspreset() {
+export function loadhardopenpluspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -909,7 +909,7 @@ function loadhardopenpluspreset() {
 	showToast();
 }
 
-function loadinvertedspreset() {
+export function loadinvertedspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeinverted").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -937,7 +937,7 @@ function loadinvertedspreset() {
 	showToast();
 }
 
-function loadmcbosspreset() {
+export function loadmcbosspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -965,7 +965,7 @@ function loadmcbosspreset() {
 	showToast();
 }
 
-function loadtinvertedkeyspreset() {
+export function loadtinvertedkeyspreset() {
 	resetallstartingitems();
 	setstartingitem("flute",14,"1");
 	document.getElementById("gametypeinverted").checked = true;
@@ -994,7 +994,7 @@ function loadtinvertedkeyspreset() {
 	showToast();
 }
 
-function loadambroz1apreset() {
+export function loadambroz1apreset() {
 	resetallstartingitems();
 	document.getElementById("gametyperetro").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -1022,7 +1022,7 @@ function loadambroz1apreset() {
 	showToast();
 }
 
-function loadinvertedcrosskeyspreset() {
+export function loadinvertedcrosskeyspreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeinverted").checked = true;
 	document.getElementById("entrancesimple").checked = true;
@@ -1050,7 +1050,7 @@ function loadinvertedcrosskeyspreset() {
 	showToast();
 }
 
-function loadchuntpreset() {
+export function loadchuntpreset() {
 	resetallstartingitems();
 	setstartingitem("boots",22,"1");
 	document.getElementById("gametypeopen").checked = true;
@@ -1079,7 +1079,7 @@ function loadchuntpreset() {
 	showToast();
 }
 
-function loadstandardbootspreset() {
+export function loadstandardbootspreset() {
 	resetallstartingitems();
 	setstartingitem("boots",22,"1");
 	document.getElementById("gametypestandard").checked = true;
@@ -1108,7 +1108,7 @@ function loadstandardbootspreset() {
 	showToast();
 }
 
-function loadpatronpreset() {
+export function loadpatronpreset() {
 	resetallstartingitems();
 	setstartingitem("hookshot",3,"1");
 	setstartingitem("glove",23,"1");
@@ -1139,7 +1139,7 @@ function loadpatronpreset() {
 	showToast();
 }
 
-function loaddarkopenpreset() {
+export function loaddarkopenpreset() {
 	resetallstartingitems();
 	setstartingitem("moonpearl",0,"1");
 	setstartingitem("glove",23,"1");
@@ -1170,7 +1170,7 @@ function loaddarkopenpreset() {
 	showToast();
 }
 
-function loadbosshuntpreset() {
+export function loadbosshuntpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -1198,7 +1198,7 @@ function loadbosshuntpreset() {
 	showToast();
 }
 
-function loadinflukeyspreset() {
+export function loadinflukeyspreset() {
 	resetallstartingitems();
 	setstartingitem("flute",14,"1");
 	document.getElementById("gametypeinverted").checked = true;
@@ -1226,7 +1226,7 @@ function loadinflukeyspreset() {
 	showToast();
 }
 
-function load76openpreset() {
+export function load76openpreset() {
 	resetallstartingitems();
 	document.getElementById("gametypeopen").checked = true;
 	document.getElementById("entrancenone").checked = true;
@@ -1255,7 +1255,7 @@ function load76openpreset() {
 }
 
 
-function importflags() {
+export function importflags() {
 	var i = document.getElementById("importflag").value;
 	
 	if (i.indexOf('/') > 1) {
@@ -1369,7 +1369,7 @@ function importflags() {
 }
 
 			
-function showToast() {
+export function showToast() {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
 

@@ -9,9 +9,13 @@ module.exports = {
     new HtmlWebpackPlugin({
      title: 'ALTTP Randomizer Community Tracker - Launcher',
      inject: 'head',
-     template: 'index.html',
-     scriptLoading: 'module'
+     template: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      title: 'ALTTP Randomizer Community Tracker - Launcher',
+      filename: 'tracker.html',
+      template: 'tracker.html',
+     }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
@@ -36,5 +40,6 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    library: 'lib',
   },
 };
