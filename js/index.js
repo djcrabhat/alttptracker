@@ -1,6 +1,18 @@
+import 'bootstrap';
+import $ from "jquery";
+import 'jquery-powertip';
+
+
+import '../css/launcher.css';
+// TODO: fix refs
+// import '../css/sprites.css';
+import '../css/fonts.css';
+import Header from '../images/overlay/header.png';
+
+
 var startingitemstring = "00000000000000000000000000";
 
-function load_cookie() {
+export function load_cookie() {
 	var c = document.cookie;
 	
 	if (c.indexOf('settings') > -1) {
@@ -89,7 +101,7 @@ function resetallstartingitems() {
 	setstartingitem("magic",25,"0");
 }
 
-function launch_tracker() {
+export function launch_tracker() {
 	var world = document.querySelector('input[name="gametypegroup"]:checked').value;
 	var entrance = document.querySelector('input[name="entrancegroup"]:checked').value;
 	var door = document.querySelector('input[name="doorgroup"]:checked').value;	
@@ -301,34 +313,6 @@ function loadarchivepreset() {
 	}
 	
 	
-}
-
-function loadopenpreset() {
-	resetallstartingitems();
-	document.getElementById("gametypeopen").checked = true;
-	document.getElementById("entrancenone").checked = true;
-	document.getElementById("doornone").checked = true;
-	document.getElementById("overworldno").checked = true;
-	document.getElementById("bossnone").checked = true;
-	document.getElementById("enemynone").checked = true;
-	document.getElementById("glitchesnone").checked = true;
-	document.getElementById("goalganon").checked = true;
-	document.getElementById("goalcrystal").checked = true;
-	document.getElementById("towerselect").value = 7;
-	document.getElementById("ganoncrystal").checked = true;
-	document.getElementById("ganonselect").value = 7;
-	document.getElementById("swordsrandomized").checked = true;
-	document.getElementById("unknownnone").checked = true;
-	document.getElementById("shopsanityno").checked = true;
-	document.getElementById("ambrosiano").checked = true;
-	document.getElementById("shuffledmaps").checked = false;
-	document.getElementById("shuffledcompasses").checked = false;
-	document.getElementById("shuffledsmallkeys").checked = false;
-	document.getElementById("shuffledbigkeys").checked = false;
-	document.getElementById("nonprogressivebowsno").checked = true;
-	document.getElementById("activatedfluteno").checked = true;
-	window.scrollTo(0,document.body.scrollHeight);
-	showToast();
 }
 
 function loadopenpreset() {
@@ -1396,7 +1380,7 @@ function showToast() {
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
-function togglediv(x) {
+export function togglediv(x) {
 	var d = document.getElementById(x + "div");
 	var a = document.getElementById(x + "arrow");
 	
@@ -1409,7 +1393,7 @@ function togglediv(x) {
 	}
 }
 
-function togglereleasediv(x) {
+export function togglereleasediv(x) {
 	var d = document.getElementById("release" + x);
 	var a = document.getElementById("arrow" + x);
 	
@@ -1422,14 +1406,14 @@ function togglereleasediv(x) {
 	}
 }
 
-function hideRestreaming() {
+export function hideRestreaming() {
 	if (window.location.href.indexOf("dunka.net") === -1) {
 		document.getElementById("restreamingpresetdiv").style.display = "none";
 		document.getElementById("importflagsdiv").style.display = "none";
 	}
 }
 
-function validateRestreamCode() {
+export function validateRestreamCode() {
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "https://alttprtracker.dunka.net/api/v1/RestreamerAPI/ValidateCode?code=" + document.getElementById("restreamingcode").value, true);
 	xhr.responseType = 'text';
