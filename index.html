@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body onload="lib.load_cookie(); lib.hideRestreaming();">
+  <body onload="index.load_cookie(); index.hideRestreaming();">
     <div class="outer-wrapper">
        <div>
           <div class="header-main-div">
@@ -38,19 +38,19 @@
              </div>
              <div>
                 <span class="preset-btn-span">
-                <input type="button" value="OPEN" class="preset-btn" onclick="lib.loadopenpreset()" />
+                <input type="button" value="OPEN" class="preset-btn" onclick="index.loadopenpreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="CASUAL BOOTS" class="preset-btn" onclick="lib.loadbootspreset()" />
+                <input type="button" value="CASUAL BOOTS" class="preset-btn" onclick="index.loadbootspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="CROSSKEYS" class="preset-btn" onclick="lib.loadcrosskeyspreset()" />
+                <input type="button" value="CROSSKEYS" class="preset-btn" onclick="index.loadcrosskeyspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="MYSTERY" class="preset-btn" onclick="lib.loadmysterypreset()" />
+                <input type="button" value="MYSTERY" class="preset-btn" onclick="index.loadmysterypreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="RETRANCE" class="preset-btn" onclick="lib.loadretrancepreset()" />
+                <input type="button" value="RETRANCE" class="preset-btn" onclick="index.loadretrancepreset()" />
                 </span>
              </div>
              <div class="preset-header" style="cursor: default;">
@@ -58,33 +58,33 @@
              </div>
              <div>
                 <span class="preset-btn-span">
-                <input type="button" value="AD KEYSANITY" class="preset-btn" onclick="lib.loadadkeyspreset()" />
+                <input type="button" value="AD KEYSANITY" class="preset-btn" onclick="index.loadadkeyspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="BOSSHUNT" class="preset-btn" onclick="lib.loadbosshuntpreset()" />
+                <input type="button" value="BOSSHUNT" class="preset-btn" onclick="index.loadbosshuntpreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="CASUAL BOOTS" class="preset-btn" onclick="lib.loadbootspreset()" />
+                <input type="button" value="CASUAL BOOTS" class="preset-btn" onclick="index.loadbootspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="CROSSKEYS" class="preset-btn" onclick="lib.loadcrosskeyspreset()" />
+                <input type="button" value="CROSSKEYS" class="preset-btn" onclick="index.loadcrosskeyspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="CHAOS BOSS" class="preset-btn" onclick="lib.loadenemizerpreset()" />
+                <input type="button" value="CHAOS BOSS" class="preset-btn" onclick="index.loadenemizerpreset()" />
                 </span>
              </div>			   
              <div>
                 <span class="preset-btn-span">
-                <input type="button" value="INFLUKEYS" class="preset-btn" onclick="lib.loadinflukeyspreset()" />
+                <input type="button" value="INFLUKEYS" class="preset-btn" onclick="index.loadinflukeyspreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="OPEN" class="preset-btn" onclick="lib.loadopenpreset()" />
+                <input type="button" value="OPEN" class="preset-btn" onclick="index.loadopenpreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="7/6 OPEN" class="preset-btn" onclick="lib.load76openpreset()" />
+                <input type="button" value="7/6 OPEN" class="preset-btn" onclick="index.load76openpreset()" />
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="RETRANCE" class="preset-btn" onclick="lib.loadretrancepreset()" />
+                <input type="button" value="RETRANCE" class="preset-btn" onclick="index.loadretrancepreset()" />
                 </span>
              </div>			   
              <div class="preset-header" style="cursor: default;">
@@ -92,7 +92,7 @@
              </div>
              <div>
                 <span class="preset-btn-span">
-                <select id="archivepresetselect" class="sprite-dropdown" onchange="lib.loadarchivepreset()">
+                <select id="archivepresetselect" class="sprite-dropdown" onchange=loadarchivepreset()">
         <option value="ADKeysanity">AD Keysanity</option>
         <option value="Ambrosia">Ambrosia</option>
         <option value="Ambroz1a">AmbroZ1a</option>
@@ -129,7 +129,7 @@
                 </select>
                 </span>
                 <span class="preset-btn-span">
-                <input type="button" value="LOAD PRESET" class="preset-btn" onclick="lib.loadarchivepreset()" />
+                <input type="button" value="LOAD PRESET" class="preset-btn" onclick="index.loadarchivepreset()" />
                 </span>
              </div>
              <div id="importflagsdiv">
@@ -144,13 +144,13 @@
                    <input type="text" id="importflag"/>
                    </span>
                    <span class="preset-btn-span">
-                   <input type="button" value="IMPORT FLAGS" class="preset-btn" onclick="lib.importflags()" />
+                   <input type="button" value="IMPORT FLAGS" class="preset-btn" onclick="index.importflags()" />
                    </span>
                 </div>
              </div>
           </div>
           <div class="preset-div">
-             <div class="preset-header" onclick="lib.togglediv('gameplay');">
+             <div class="preset-header" onclick="index.togglediv('gameplay');">
                 <span id="gameplayarrow">&#9660;</span> Gameplay Settings
              </div>
              <div id="gameplaydiv" style="display: none;">
@@ -260,7 +260,7 @@
              </div>
           </div>
           <div class="preset-div">
-             <div class="preset-header" onclick="lib.togglediv('logic');">
+             <div class="preset-header" onclick="index.togglediv('logic');">
                 <span id="logicarrow">&#9660;</span> Logic Settings
              </div>
              <div id="logicdiv" style="display: none;">
@@ -378,7 +378,7 @@
              </div>
           </div>
           <div class="preset-div">
-             <div class="preset-header" onclick="lib.togglediv('goal');">
+             <div class="preset-header" onclick="index.togglediv('goal');">
                 <span id="goalarrow">&#9660;</span> Goal Settings
              </div>
              <div id="goaldiv" style="display: none;">
@@ -456,42 +456,42 @@
              </div>
           </div>
           <div class="preset-div">
-             <div class="preset-header" onclick="lib.togglediv('starting');">
+             <div class="preset-header" onclick="index.togglediv('starting');">
                 <span id="startingarrow">&#9660;</span> Starting Items
              </div>
              <div id="startingdiv" style="display: none;">
                 <div class="starting-inner-div">
-                   <div id="startingmoonpearl" class="item moonpearl" onclick="lib.toggle('moonpearl',0)"></div>
-                   <div id="startingbow" class="item bow0" onclick="lib.toggle('bow',1)"></div>
-                   <div id="startingboomerang" class="item boomerang0" onclick="lib.toggle('boomerang',2)"></div>
-                   <div id="startinghookshot" class="item hookshot" onclick="lib.toggle('hookshot',3)"></div>
-                   <div id="startingmushroom" class="item mushroom" onclick="lib.toggle('mushroom',4)" ></div>
-                   <div id="startingpowder" class="item powder" onclick="lib.toggle('powder',5)"></div>
-                   <div id="startingfirerod" class="item firerod" onclick="lib.toggle('firerod',6)"></div>
-                   <div id="startingicerod" class="item icerod" onclick="lib.toggle('icerod',7)"></div>
-                   <div id="startingbombos" class="item bombos" onclick="lib.toggle('bombos',8)"></div>
-                   <div id="startingether" class="item ether" onclick="lib.toggle('ether',9)"></div>
-                   <div id="startingquake" class="item quake" onclick="lib.toggle('quake',10)"></div>
-                   <div id="startinglantern" class="item lantern" onclick="lib.toggle('lantern',11)"></div>
-                   <div id="startinghammer" class="item hammer" onclick="lib.toggle('hammer',12)"></div>
-                   <div id="startingshovel" class="item shovel" onclick="lib.toggle('shovel',13)"></div>
-                   <div id="startingflute" class="item flute" onclick="lib.toggle('flute',14)"></div>
-                   <div id="startingnet" class="item net" onclick="lib.toggle('net',15)"></div>
-                   <div id="startingbook" class="item book" onclick="lib.toggle('book',16)"></div>
-                   <div id="startingbottle" class="item bottle" onclick="lib.toggle('bottle',17)"></div>
-                   <div id="startingsomaria" class="item somaria" onclick="lib.toggle('somaria',18)"></div>
-                   <div id="startingbyrna" class="item byrna" onclick="lib.toggle('byrna',19)"></div>
-                   <div id="startingcape" class="item cape" onclick="lib.toggle('cape',20)"></div>
-                   <div id="startingmirror" class="item mirror" onclick="lib.toggle('mirror',21)"></div>
-                   <div id="startingboots" class="item boots" onclick="lib.toggle('boots',22)"></div>
-                   <div id="startingglove" class="item glove0" onclick="lib.toggle('glove',23)"></div>
-                   <div id="startingflippers" class="item flippers" onclick="lib.toggle('flippers',24)"></div>
-                   <div id="startingmagic" class="item magic" onclick="lib.toggle('magic',25)"></div>
+                   <div id="startingmoonpearl" class="item moonpearl" onclick="index.toggle('moonpearl',0)"></div>
+                   <div id="startingbow" class="item bow0" onclick="index.toggle('bow',1)"></div>
+                   <div id="startingboomerang" class="item boomerang0" onclick="index.toggle('boomerang',2)"></div>
+                   <div id="startinghookshot" class="item hookshot" onclick="index.toggle('hookshot',3)"></div>
+                   <div id="startingmushroom" class="item mushroom" onclick="index.toggle('mushroom',4)" ></div>
+                   <div id="startingpowder" class="item powder" onclick="index.toggle('powder',5)"></div>
+                   <div id="startingfirerod" class="item firerod" onclick="index.toggle('firerod',6)"></div>
+                   <div id="startingicerod" class="item icerod" onclick="index.toggle('icerod',7)"></div>
+                   <div id="startingbombos" class="item bombos" onclick="index.toggle('bombos',8)"></div>
+                   <div id="startingether" class="item ether" onclick="index.toggle('ether',9)"></div>
+                   <div id="startingquake" class="item quake" onclick="index.toggle('quake',10)"></div>
+                   <div id="startinglantern" class="item lantern" onclick="index.toggle('lantern',11)"></div>
+                   <div id="startinghammer" class="item hammer" onclick="index.toggle('hammer',12)"></div>
+                   <div id="startingshovel" class="item shovel" onclick="index.toggle('shovel',13)"></div>
+                   <div id="startingflute" class="item flute" onclick="index.toggle('flute',14)"></div>
+                   <div id="startingnet" class="item net" onclick="index.toggle('net',15)"></div>
+                   <div id="startingbook" class="item book" onclick="index.toggle('book',16)"></div>
+                   <div id="startingbottle" class="item bottle" onclick="index.toggle('bottle',17)"></div>
+                   <div id="startingsomaria" class="item somaria" onclick="index.toggle('somaria',18)"></div>
+                   <div id="startingbyrna" class="item byrna" onclick="index.toggle('byrna',19)"></div>
+                   <div id="startingcape" class="item cape" onclick="index.toggle('cape',20)"></div>
+                   <div id="startingmirror" class="item mirror" onclick="index.toggle('mirror',21)"></div>
+                   <div id="startingboots" class="item boots" onclick="index.toggle('boots',22)"></div>
+                   <div id="startingglove" class="item glove0" onclick="index.toggle('glove',23)"></div>
+                   <div id="startingflippers" class="item flippers" onclick="index.toggle('flippers',24)"></div>
+                   <div id="startingmagic" class="item magic" onclick="index.toggle('magic',25)"></div>
                 </div>
              </div>
           </div>
           <div id="restreamingpresetdiv" class="preset-div">
-             <div class="preset-header" onclick="lib.togglediv('restream');">
+             <div class="preset-header" onclick="index.togglediv('restream');">
                 <span id="restreamarrow">&#9660;</span> Restreaming
              </div>
              <div id="restreamdiv" style="display: none;">
@@ -500,7 +500,7 @@
                    Enter Code: <input style="width: 100px" id="restreamingcode" type="text" />
                    </span>
                    <span class="preset-btn-span">
-                   <input type="button" value="VALIDATE" class="preset-btn" onclick="lib.validateRestreamCode()" />
+                   <input type="button" value="VALIDATE" class="preset-btn" onclick="index.validateRestreamCode()" />
                    </span>
                    <span class="preset-span" style="display: none;">
                    <input id="restreamingno" value="N" type="radio" name="restreamgroup" checked />
@@ -1137,7 +1137,7 @@
           </div>
           <div>
              <div id="snackbar">Settings Applied! Click to launch ==></div>
-             <center><button type="button" class="launch preset-btn" style="width: 400px; font-size: 50px;" onclick="lib.launch_tracker()">LAUNCH TRACKER</button></center>
+             <center><button type="button" class="launch preset-btn" style="width: 400px; font-size: 50px;" onclick="index.launch_tracker()">LAUNCH TRACKER</button></center>
           </div>
        </div>
     </div>

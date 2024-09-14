@@ -1,21 +1,21 @@
 <html>
 	<head>
-		<title>ALTTP Randomizer Community Tracker - Tracker</title>
-		<script src="js/jquery-3.3.1.js?v=20036"></script>
-		<script src="js/bootstrap.min.js?v=20036"></script>
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<!-- <script src="js/jquery-3.3.1.js?v=20036"></script>
+		<script src="js/bootstrap.min.js?v=20036"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/sprites.css?v=20036">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css?v=20036">
 		<link rel="stylesheet" type="text/css" id="mainstyle">
 		<link rel="stylesheet" type="text/css" id="maincompactstyle">
 		<link rel="stylesheet" type="text/css" id="alternatestyle">
-		<script src="js/util.js?v=20036"></script>
+		<!-- <script src="js/util.js?v=20036"></script>
 		<script src="js/items.js?v=20036"></script>
 		<script src="js/chests.js?v=20036"></script>
 		<script src="js/entrancechests.js?v=20036"></script>
 		<script src="js/track.js?v=20036"></script>
 		<script src="js/dungeons.js?v=20036"></script>
 		<script src="js/spoiler.js?v=20036"></script>
-		<script src="js/autot.js?v=20036"></script>
+		<script src="js/autot.js?v=20036"></script> -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3T0KM2W1L"></script>
 		<script>
@@ -32,7 +32,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
 	</head>
-	<body style="background-color: black;">
+	<body style="background-color: black;" onload="tracker.start()">
 		<div id="app" class="row" style="display: none;">
 			<div id="trackingoverlay" class="restreamingoverlay">
 				<div id="tracker" class="cell">
@@ -45,7 +45,7 @@
 											<div class="item tunic tunic active-1 bunny" onClick="toggle('tunic')" onMouseover="findItems(['Armor'])" onMouseout="unhighlightAll()"></div>
 											<div id="crystalsdiv" class="item active crystalgoal" onClick="crystalGoal()"></div>
 											<div id="crystalsselectdiv" class="crystalgoalselect" style="visibility: collapse;">
-												<img class="goalselect" src="./images/dungeons/crystal.png" onClick="setCrystalGoal('')"/>
+												<img class="goalselect" src="<%=require('./images/dungeons/crystal.png')" onClick="setCrystalGoal('')"/>
 												<img class="goalselect" src="./images/dungeons/crystal0.png" onClick="setCrystalGoal(0)"/>
 												<img class="goalselect" src="./images/dungeons/crystal1.png" onClick="setCrystalGoal(1)"/>
 												<img class="goalselect" src="./images/dungeons/crystal2.png" onClick="setCrystalGoal(2)"/>
@@ -1315,6 +1315,5 @@
 				<center style="user-select: none; transform: scale(1.25);"><input type="button" onclick="closeFlagsModal();" value="Cancel" />&nbsp;&nbsp;&nbsp;<input type="button" onclick="adjustFlags();" value="Submit" /></center>
 			</div>
 		</div>
-		<script>start()</script>
 	</body>
 </html>
